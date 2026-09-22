@@ -1,8 +1,8 @@
 @if (product(); as p) {
   <h1>{{ p.name }}</h1>
   <p>{{ p.description }}</p>
-  <p><b>Price:</b> {{ p.price }}</p>
+  <p><b>Price:</b> {{ p.price | currency:'EUR'}}</p>
   <p><b>Quantity:</b> {{ p.stockQuantity }}</p>
 } @else {
-  <p>Loading product...</p>
+  <p>Il server si sta avviando, può richiedere fino a un minuto...</p>
 }

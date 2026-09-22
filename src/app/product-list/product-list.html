@@ -1,6 +1,10 @@
-<h1>Lista Prodotti</h1>
-@for (p of products(); track p.id) {
-<div>Name: <a [routerLink]="['/products', p.id]">{{p.name}}</a></div>
-<div><p>Price: {{p.price}}</p></div>
-<div><p>Stock Quantity: {{p.stockQuantity}}</p></div>
+@if (loading()) {
+  <p>Il server si sta avviando, può richiedere fino a un minuto...</p>
+} @else {
+  <h1>Lista Prodotti</h1>
+  @for (p of products(); track p.id) {
+    <div>Name: <a [routerLink]="['/products', p.id]">{{p.name}}</a></div>
+    <div><p>Price: {{p.price | currency:'EUR'}}</p></div>
+    <div><p>Stock Quantity: {{p.stockQuantity}}</p></div>
+  }
 }
