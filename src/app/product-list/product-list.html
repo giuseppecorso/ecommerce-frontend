@@ -1,6 +1,6 @@
 <h1>Lista Prodotti</h1>
 @for (p of products(); track p.id) {
-<div><p>Name: {{p.name}}</p></div>
+<div>Name: <a [routerLink]="['/products', p.id]">{{p.name}}</a></div>
 <div><p>Price: {{p.price}}</p></div>
 <div><p>Stock Quantity: {{p.stockQuantity}}</p></div>
 }
