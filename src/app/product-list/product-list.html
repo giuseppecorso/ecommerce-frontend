@@ -1,10 +1,21 @@
 @if (loading()) {
-  <p>Il server si sta avviando, può richiedere fino a un minuto...</p>
+<p>Il server si sta avviando, può richiedere fino a un minuto...</p>
 } @else {
-  <h1>Lista Prodotti</h1>
+<h1>Lista Prodotti</h1>
+<div class="product-grid">
   @for (p of products(); track p.id) {
-    <div>Name: <a [routerLink]="['/products', p.id]">{{p.name}}</a></div>
-    <div><p>Price: {{p.price | currency:'EUR'}}</p></div>
-    <div><p>Stock Quantity: {{p.stockQuantity}}</p></div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ p.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ p.price | currency:'EUR'}}</p>
+      <p>{{ p.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a matButton="filled" [routerLink]="['/products', p.id]">Dettagli</a>
+    </mat-card-actions>
+  </mat-card>
   }
+</div>
 }

@@ -1,0 +1,15 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.product-grid mat-card-actions a[matButton="filled"] {
+    color: black;
+    background-color: darkorange;
+}
+
+:host {
+  display: block;
+  padding: 16px;
+}
