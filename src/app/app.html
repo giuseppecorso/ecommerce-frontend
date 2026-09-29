@@ -1,4 +1,10 @@
 <mat-toolbar>
   <a routerLink="/products">MY SHOP</a>
-  </mat-toolbar>
+  <span class="spacer"></span>
+  <button matButton="filled" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    Logout
+  </button>
+
+</mat-toolbar>
 <router-outlet />
