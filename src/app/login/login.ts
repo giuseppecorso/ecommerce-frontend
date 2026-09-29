@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { Router } from '@angular/router';
 
 interface LoginResponse {
   token: string;
@@ -18,6 +19,7 @@ interface LoginResponse {
 })
 export class Login {
   private http = inject(HttpClient);
+  private router = inject(Router);
   form = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
@@ -28,6 +30,7 @@ export class Login {
       .post<LoginResponse>(environment.apiUrl + '/api/auth/login', this.form.value)
       .subscribe(response => {
         localStorage.setItem('token', response.token);
+        this.router.navigate(['/products']);
       });
   }
 }

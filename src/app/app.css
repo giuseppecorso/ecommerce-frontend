@@ -1,4 +1,4 @@
-mat-toolbar a {
+.brand {
   color: inherit;
   text-decoration: none;
   font-size: 22px;
@@ -7,4 +7,8 @@ mat-toolbar a {
 
 .spacer {
   flex: 1 1 auto;
+}
+
+mat-toolbar {
+  gap: 8px;
 }

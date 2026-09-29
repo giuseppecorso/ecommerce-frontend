@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { Component, signal, inject } from '@angular/core';
+import { RouterOutlet, RouterLink, Router } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,8 +13,12 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class App {
   protected readonly title = signal('ecommerce-frontend');
+  private router = inject(Router);
 
   logout() {
-    localStorage.removeItem('token');
+    if (confirm('Confirm log out?')) {
+      localStorage.removeItem('token');
+      this.router.navigate(['/products']);
+    }
   }
 }
