@@ -1,3 +1,11 @@
+@if(loading()){
+Loading orders..
+} @else if (errorMessage()) {
+{{ errorMessage() }}
+} @else if(orders().length === 0){
+No orders yet
+} @else {
+
 <table mat-table [dataSource]="orders()">
 
     <ng-container matColumnDef="id">
@@ -28,3 +36,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
+
+}

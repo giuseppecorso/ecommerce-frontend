@@ -16,14 +16,22 @@ export class MyOrders {
   private http = inject(HttpClient);
   orders = signal<Order[]>([]);
   loading = signal(true);
+  errorMessage = signal('');
   displayedColumns = ['id', 'username', 'dateOrder', 'status', 'items'];
 
   constructor() {
     this.http
       .get<Order[]>(environment.apiUrl + '/api/orders')
-      .subscribe((data) => {
-        this.orders.set(data);
-        this.loading.set(false);
+      .subscribe({
+        next: (data) => {
+          this.orders.set(data); this.loading.set(false);
+        },
+        error: (err) => {
+          if (err.status === 401) {
+            this.errorMessage.set('Log in to see your orders');
+          }
+          this.loading.set(false);
+        }
       });
   }
 }
