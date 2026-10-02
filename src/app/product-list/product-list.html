@@ -1,7 +1,7 @@
 @if (loading()) {
-<p>Il server si sta avviando, può richiedere fino a un minuto...</p>
+<p>The server is starting up, this may take up to a minute...</p>
 } @else {
-<h1>Lista Prodotti</h1>
+<h1>Products list</h1>
 <div class="product-grid">
   @for (p of products(); track p.id) {
   <mat-card>
@@ -13,7 +13,7 @@
       <p>{{ p.description}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <a matButton="filled" [routerLink]="['/products', p.id]">Dettagli</a>
+      <a matButton="filled" [routerLink]="['/products', p.id]">Details</a>
     </mat-card-actions>
   </mat-card>
   }

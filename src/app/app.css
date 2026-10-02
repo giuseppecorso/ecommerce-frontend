@@ -10,5 +10,8 @@
 }
 
 mat-toolbar {
+  --mat-toolbar-container-background-color: #1e293b;
+  --mat-toolbar-container-text-color: #ffffff;
+  --mat-button-filled-container-shape: 4px;
   gap: 8px;
 }

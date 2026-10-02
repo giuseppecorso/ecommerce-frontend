@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  --mat-button-filled-container-color: #c8614f;
+  --mat-button-filled-label-text-color: #ffffff;
+}

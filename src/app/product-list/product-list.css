@@ -6,7 +6,6 @@
 
 .product-grid mat-card-actions a[matButton="filled"] {
     color: black;
-    background-color: darkorange;
 }
 
 :host {

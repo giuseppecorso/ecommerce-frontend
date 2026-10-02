@@ -3,6 +3,7 @@ import { RouterOutlet, RouterLink, Router } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './app.html',
 })
 export class App {
+  private snackBar = inject(MatSnackBar);
   protected readonly title = signal('ecommerce-frontend');
   private router = inject(Router);
 
@@ -19,6 +21,7 @@ export class App {
     if (confirm('Confirm log out?')) {
       localStorage.removeItem('token');
       this.router.navigate(['/products']);
+      this.snackBar.open('Logout complete', 'Close', { duration: 6000 });
     }
   }
 }
