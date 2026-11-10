@@ -1,21 +1,27 @@
-@if (loading()) {
-<p>The server is starting up, this may take up to a minute...</p>
-} @else {
-<h1>Products list</h1>
-<div class="product-grid">
-  @for (p of products(); track p.id) {
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ p.name }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ p.price | currency:'EUR'}}</p>
-      <p>{{ p.description}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a matButton="filled" [routerLink]="['/products', p.id]">Details</a>
-    </mat-card-actions>
-  </mat-card>
+<div class="page">
+  <h1 class="page-title">Shop</h1>
+
+  @if (loading()) {
+    <p class="note">Loading…</p>
+  } @else if (products().length === 0) {
+    <p class="note">The shelves are empty right now. Please come back later.</p>
+  } @else {
+    <nav class="filters" aria-label="Categories">
+      <button type="button" [class.active]="selected() === null" (click)="selected.set(null)">All</button>
+      @for (g of groups(); track g.name) {
+        <button type="button" [class.active]="selected() === g.name" (click)="selected.set(g.name)">{{ g.name }}</button>
+      }
+    </nav>
+
+    @for (g of visibleGroups(); track g.name) {
+      <section class="group">
+        <h2 class="section-title">{{ g.name }}</h2>
+        <div class="grid">
+          @for (p of g.products; track p.id) {
+            <app-product-card [product]="p" />
+          }
+        </div>
+      </section>
+    }
   }
 </div>
-}

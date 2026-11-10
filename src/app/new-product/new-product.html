@@ -1,4 +1,5 @@
-<h2>New product</h2>
+<div class="page narrow">
+<h1 class="page-title">New product</h1>
 <form [formGroup]="form" (ngSubmit)="save()">
 <mat-form-field>
   <mat-label>Name</mat-label>
@@ -7,6 +8,10 @@
 <mat-form-field>
   <mat-label>Description</mat-label>
   <input matInput type="text" formControlName="description">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Category</mat-label>
+  <input matInput type="text" formControlName="category">
 </mat-form-field>
 <mat-form-field>
   <mat-label>Price</mat-label>
@@ -18,3 +23,4 @@
 </mat-form-field>
 <button matButton="filled" type="submit" [disabled]="form.invalid">Save</button>
 </form>
+</div>

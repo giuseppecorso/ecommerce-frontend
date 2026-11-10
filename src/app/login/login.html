@@ -1,3 +1,5 @@
+<div class="page narrow">
+<h1 class="page-title">Login</h1>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <mat-label>Username</mat-label>
@@ -9,3 +11,5 @@
   </mat-form-field>
   <button matButton="filled" type="submit" [disabled]="form.invalid">Login</button>
 </form>
+<p class="note">Demo account: <b>user</b> / <b>curio2026</b></p>
+</div>

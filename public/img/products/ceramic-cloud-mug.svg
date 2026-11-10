@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ceramic Cloud Mug">
+<title>Ceramic Cloud Mug</title>
+<defs>
+<filter id="p" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="4" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="9" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.4" result="m"/>
+<feComposite in="d" in2="m" operator="in"/>
+</filter>
+<pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2b2b2b" stroke-width="1.3"/></pattern>
+<pattern id="hr" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c8372d" stroke-width="1.6"/></pattern>
+<pattern id="hy" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#c9962b" stroke-width="2.1"/></pattern>
+<pattern id="ht" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#2a7f7a" stroke-width="2.1"/></pattern>
+<pattern id="hxy" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#c9962b" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hxt" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2a7f7a" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2b2b2b" stroke-width="0.8" fill="none"/></pattern>
+</defs>
+<g filter="url(#p)" fill="none" stroke="#2b2b2b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M96 355 l48 -11 M127 352 l48 -11 M158 355 l48 -11 M188 352 l48 -11 M219 355 l48 -11 M250 352 l48 -11 " stroke-width="1.5" opacity=".5"/>
+<path d="M112 150 V266 Q112 312 154 312 H226 Q268 312 268 266 V150"/>
+<ellipse cx="190" cy="150" rx="78" ry="13"/>
+<path d="M268 178 Q324 176 320 226 Q316 272 266 268 M268 198 Q300 198 298 226 Q296 250 268 248"/>
+<path d="M150 262 Q130 262 132 244 Q134 228 152 230 Q158 208 182 212 Q198 198 214 214 Q238 212 238 234 Q252 240 246 254 Q242 262 230 262 Z" stroke-width="1.4"/>
+<circle cx="166" cy="248" r="6.5" fill="url(#hr)" stroke="none"/><circle cx="216" cy="248" r="6.5" fill="url(#hr)" stroke="none"/>
+<path d="M176 238 q4 -5 8 0 M198 238 q4 -5 8 0 M186 250 q5 4 10 0" stroke-width="1.4"/>
+<path d="M160 118 Q150 98 164 82 Q176 68 166 52 M206 120 Q196 100 210 86 Q220 74 212 60" stroke-width="1.4"/>
+</g>
+</svg>

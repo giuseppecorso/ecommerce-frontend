@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Folding Pocket Knife">
+<title>Folding Pocket Knife</title>
+<defs>
+<filter id="p" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="4" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="9" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.4" result="m"/>
+<feComposite in="d" in2="m" operator="in"/>
+</filter>
+<pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2b2b2b" stroke-width="1.3"/></pattern>
+<pattern id="hr" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c8372d" stroke-width="1.6"/></pattern>
+<pattern id="hy" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#c9962b" stroke-width="2.1"/></pattern>
+<pattern id="ht" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#2a7f7a" stroke-width="2.1"/></pattern>
+<pattern id="hxy" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#c9962b" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hxt" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2a7f7a" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2b2b2b" stroke-width="0.8" fill="none"/></pattern>
+</defs>
+<g filter="url(#p)" fill="none" stroke="#2b2b2b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M75 335 l60 -11 M113 332 l60 -11 M152 335 l60 -11 M190 332 l60 -11 M229 335 l60 -11 M267 332 l60 -11 " stroke-width="1.5" opacity=".5"/>
+<g transform="rotate(-18 200 210)">
+<path d="M152 194 L54 148 Q40 146 48 160 L142 228 Z" fill="#fbfaf6"/>
+<path d="M72 164 L140 206" stroke-width="1.4"/><path d="M96 164 l18 8" stroke-width="1.4"/>
+<rect x="136" y="188" width="210" height="48" rx="24" fill="url(#hy)"/>
+<path d="M172 189 V235"/>
+<circle cx="154" cy="212" r="5" fill="#fbfaf6"/><circle cx="316" cy="212" r="4" fill="#fbfaf6"/>
+<circle cx="358" cy="212" r="13" stroke="#c8372d" stroke-width="3"/>
+</g>
+</g>
+</svg>

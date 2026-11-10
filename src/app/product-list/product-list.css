@@ -1,14 +1,46 @@
-.product-grid {
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 26px;
+  margin-bottom: 70px;
+}
+
+.filters button {
+  padding: 0 0 3px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  font: 300 12px 'Jost', sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--soft);
+  cursor: pointer;
+}
+
+.filters button:hover {
+  color: var(--ink);
+  border-bottom-color: var(--yellow);
+}
+
+.filters button.active {
+  color: var(--ink);
+  border-bottom-color: var(--red);
+}
+
+.group {
+  margin-bottom: 90px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
+  gap: 56px 44px;
 }
 
-.product-grid mat-card-actions a[matButton="filled"] {
-    color: black;
-}
-
-:host {
-  display: block;
-  padding: 16px;
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 18px;
+  }
 }

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Wooden Domino Set">
+<title>Wooden Domino Set</title>
+<defs>
+<filter id="p" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="4" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="9" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.4" result="m"/>
+<feComposite in="d" in2="m" operator="in"/>
+</filter>
+<pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2b2b2b" stroke-width="1.3"/></pattern>
+<pattern id="hr" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c8372d" stroke-width="1.6"/></pattern>
+<pattern id="hy" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#c9962b" stroke-width="2.1"/></pattern>
+<pattern id="ht" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#2a7f7a" stroke-width="2.1"/></pattern>
+<pattern id="hxy" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#c9962b" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hxt" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2a7f7a" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2b2b2b" stroke-width="0.8" fill="none"/></pattern>
+</defs>
+<g filter="url(#p)" fill="none" stroke="#2b2b2b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M55 361 l69 -11 M100 358 l69 -11 M144 361 l69 -11 M189 358 l69 -11 M233 361 l69 -11 M278 358 l69 -11 " stroke-width="1.5" opacity=".5"/>
+<path d="M56 232 H256 V318 H56 Z" fill="url(#hy)"/>
+<path d="M56 232 L88 204 H288 L256 232 M288 204 V290 L256 318"/>
+<path d="M112 219 L132 201 H330 L310 219 Z" fill="#fbfaf6"/>
+<rect x="112" y="256" width="88" height="38" rx="3" fill="#fbfaf6" stroke-width="1.4"/>
+<path d="M126 275 H186" stroke-width="1.4"/>
+<g transform="translate(292 236) rotate(9)"><rect x="0" y="0" width="42" height="80" rx="6" fill="#fbfaf6"/><path d="M5 40 H37"/><circle cx="12" cy="14" r="3.8" fill="#c8372d" stroke="none"/><circle cx="30" cy="26" r="3.8" fill="#c8372d" stroke="none"/><circle cx="21" cy="60" r="3.8" fill="#c8372d" stroke="none"/></g>
+<g transform="translate(338 262) rotate(-7)"><rect x="0" y="0" width="42" height="80" rx="6" fill="#fbfaf6"/><path d="M5 40 H37"/><circle cx="12" cy="12" r="3.8" fill="#c8372d" stroke="none"/><circle cx="30" cy="28" r="3.8" fill="#c8372d" stroke="none"/><circle cx="12" cy="52" r="3.8" fill="#c8372d" stroke="none"/><circle cx="30" cy="52" r="3.8" fill="#c8372d" stroke="none"/><circle cx="21" cy="68" r="3.8" fill="#c8372d" stroke="none"/></g>
+</g>
+</svg>

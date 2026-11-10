@@ -1,8 +1,28 @@
-@if (product(); as p) {
-  <h1>{{ p.name }}</h1>
-  <p>{{ p.description }}</p>
-  <p><b>Price:</b> {{ p.price | currency:'EUR'}}</p>
-  <p><b>Quantity:</b> {{ p.stockQuantity }}</p>
-} @else {
-  <p>The server is starting up, this may take up to a minute...</p>
-}
+<div class="page">
+  @if (product(); as p) {
+    <article class="detail">
+      <div class="pic">
+        <img [src]="p.imageUrl ?? 'img/hero/star.svg'" [alt]="p.name + ', pencil drawing'" width="400" height="400" />
+      </div>
+      <div class="info">
+        @if (p.category) {
+          <p class="cat">{{ p.category }}</p>
+        }
+        <h1>{{ p.name }}</h1>
+        <p class="price">{{ p.price | currency: 'EUR' }}</p>
+        <p class="desc">{{ p.description }}</p>
+        @if (p.stockQuantity === 0) {
+          <p class="stock out">Sold out</p>
+        } @else {
+          <p class="stock">{{ p.stockQuantity }} in stock</p>
+        }
+        <a class="text-link" routerLink="/products">Back to the shop</a>
+      </div>
+    </article>
+  } @else if (notFound()) {
+    <p class="note">This object is not on our shelves.</p>
+    <p class="note"><a class="text-link" routerLink="/products">Back to the shop</a></p>
+  } @else {
+    <p class="note">Loading…</p>
+  }
+</div>

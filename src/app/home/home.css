@@ -1,0 +1,138 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 276px;
+  --paper: #fffefb;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 14px 34px -20px rgba(40, 36, 28, 0.38);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0 20px;
+  font-size: clamp(22px, 3.4vw, 40px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.hero p {
+  position: relative;
+  z-index: 2;
+  margin: 14px 0 0;
+  padding: 0 20px;
+  color: var(--soft);
+  letter-spacing: 0.14em;
+  font-size: 14px;
+}
+
+.trail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.float {
+  position: absolute;
+  z-index: 1;
+  width: var(--s);
+  height: var(--s);
+  left: calc(var(--x) - var(--s) / 2);
+  top: calc(var(--y) - var(--s) / 2);
+  /* a soft paper halo hides the trail behind each sketch */
+  background: radial-gradient(circle, var(--paper) 52%, transparent 70%);
+  animation: drift 9s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -8px; }
+}
+
+.featured {
+  padding: 72px 0 100px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+.track {
+  flex: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3 * 24px) / 4);
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 10px 0 20px;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track > * {
+  scroll-snap-align: start;
+}
+
+.arrow:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.arrow {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: none;
+  font: 300 24px/1 'Jost', sans-serif;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.all {
+  margin: 44px 0 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .track { grid-auto-columns: calc((100% - 24px) / 2); }
+}
+
+@media (max-width: 900px) {
+  .trail, .desktop-only { display: none; }
+  .float {
+    --s: 54px !important;
+    left: calc(var(--mx) - var(--s) / 2);
+    top: calc(var(--my) - var(--s) / 2);
+  }
+}
+
+@media (max-width: 560px) {
+  .track { grid-auto-columns: 78%; gap: 24px; }
+  .arrow { display: none; }
+  .carousel { padding: 0 6vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float { animation: none; }
+}

@@ -21,6 +21,7 @@ export class NewProduct {
   form = new FormGroup({
     name: new FormControl('', Validators.required),
     description: new FormControl(''),
+    category: new FormControl(''),
     price: new FormControl<number | null>(null, [Validators.required, Validators.min(0.01)]),
     stockQuantity: new FormControl<number | null>(null, [Validators.required, Validators.min(0)])
   });

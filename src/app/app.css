@@ -1,17 +1,128 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.top {
+  border-top: 3px solid var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+  padding: 18px 6vw;
+  border-bottom: 1px solid var(--line);
+}
+
 .brand {
-  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 500;
 }
 
-.spacer {
-  flex: 1 1 auto;
+.brand app-logo {
+  width: 92px;
+  height: 70px;
 }
 
-mat-toolbar {
-  --mat-toolbar-container-background-color: #1e293b;
-  --mat-toolbar-container-text-color: #ffffff;
-  --mat-button-filled-container-shape: 4px;
-  gap: 8px;
+.brand span {
+  letter-spacing: 0.32em;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.top nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+}
+
+.top nav a,
+.top nav button {
+  padding: 0 0 3px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  font: 300 12px 'Jost', sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.top nav a:hover,
+.top nav button:hover {
+  border-bottom-color: var(--yellow);
+}
+
+.top nav a.active {
+  border-bottom-color: var(--red);
+}
+
+.bottom {
+  border-top: 1px solid var(--line);
+  padding: 60px 6vw 28px;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px 32px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.about app-logo {
+  width: 120px;
+  height: 92px;
+}
+
+.about p {
+  margin: 16px 0 0;
+  color: var(--soft);
+  font-size: 14px;
+}
+
+.bottom h2 {
+  margin: 0 0 14px;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.bottom nav a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.bottom nav a:hover {
+  text-decoration: underline;
+}
+
+.legal {
+  max-width: 1180px;
+  margin: 48px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--soft);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 760px) {
+  .cols { grid-template-columns: 1fr 1fr; }
+  .about { grid-column: 1 / -1; }
+  .brand app-logo { width: 72px; height: 55px; }
+  .brand span { display: none; }
 }

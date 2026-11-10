@@ -1,25 +1,52 @@
-<mat-toolbar>
-  <a class="brand" routerLink="/products">CURIO LANE</a>
-  <span class="spacer"></span>
-  <a matButton="filled" routerLink="/my-orders">
-    <mat-icon>receipt_long</mat-icon>
-    My orders
+<header class="top">
+  <a class="brand" routerLink="/" aria-label="Curio Lane, home">
+    <app-logo />
+    <span>Curio Lane</span>
   </a>
-  <a matButton="filled" routerLink="/new-product">
-    <mat-icon>add_box</mat-icon>
-    New product
-  </a>
-  @if (isLoggedIn()) {
-    <button matButton="filled" (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      Logout
-    </button>
-  } @else {
-    <a matButton="filled" routerLink="/login">
-      <mat-icon>login</mat-icon>
-      Login
-    </a>
-  }
+  <nav aria-label="Main">
+    <a routerLink="/products" routerLinkActive="active">Shop</a>
+    <a routerLink="/my-orders" routerLinkActive="active">My orders</a>
+    @if (isAdmin()) {
+      <a routerLink="/new-product" routerLinkActive="active">New product</a>
+    }
+    @if (isLoggedIn()) {
+      <button type="button" (click)="logout()">Logout</button>
+    } @else {
+      <a routerLink="/login" routerLinkActive="active">Login</a>
+    }
+  </nav>
+</header>
 
-</mat-toolbar>
-<router-outlet />
+<main>
+  <router-outlet />
+</main>
+
+<footer class="bottom">
+  <div class="cols">
+    <div class="about">
+      <app-logo />
+      <p>Small finds, big stories.<br />Objects for desks, shelves and long journeys.</p>
+    </div>
+    <nav aria-label="Shop">
+      <h2>Shop</h2>
+      <a routerLink="/products">All objects</a>
+      <a routerLink="/my-orders">My orders</a>
+      <a routerLink="/login">Login</a>
+    </nav>
+    <nav aria-label="Project">
+      <h2>Project</h2>
+      <a href="https://github.com/giuseppecorso/ecommerce-backend#readme" target="_blank" rel="noopener">Read the README</a>
+      <a href="https://github.com/giuseppecorso/ecommerce-backend" target="_blank" rel="noopener">Backend on GitHub</a>
+      <a href="https://github.com/giuseppecorso/ecommerce-frontend" target="_blank" rel="noopener">Frontend on GitHub</a>
+      <a href="/swagger-ui.html" target="_blank" rel="noopener">API documentation</a>
+    </nav>
+    <nav aria-label="Contact">
+      <h2>Contact</h2>
+      <a href="https://giuseppecorso.it" target="_blank" rel="noopener">giuseppecorso.it</a>
+      <a href="https://github.com/giuseppecorso" target="_blank" rel="noopener">GitHub profile</a>
+    </nav>
+  </div>
+  <p class="legal">
+    © {{ year }} Curio Lane — a portfolio project by Giuseppe Corso. This is not a real shop: nothing here can be bought.
+  </p>
+</footer>

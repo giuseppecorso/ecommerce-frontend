@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Magnetic Travel Chess">
+<title>Magnetic Travel Chess</title>
+<defs>
+<filter id="p" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="4" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="9" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.4" result="m"/>
+<feComposite in="d" in2="m" operator="in"/>
+</filter>
+<pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2b2b2b" stroke-width="1.3"/></pattern>
+<pattern id="hr" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c8372d" stroke-width="1.6"/></pattern>
+<pattern id="hy" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#c9962b" stroke-width="2.1"/></pattern>
+<pattern id="ht" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#2a7f7a" stroke-width="2.1"/></pattern>
+<pattern id="hxy" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#c9962b" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hxt" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2a7f7a" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2b2b2b" stroke-width="0.8" fill="none"/></pattern>
+</defs>
+<g filter="url(#p)" fill="none" stroke="#2b2b2b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M60 309 l62 -11 M100 306 l62 -11 M140 309 l62 -11 M180 306 l62 -11 M220 309 l62 -11 M260 306 l62 -11 " stroke-width="1.5" opacity=".5"/>
+<path d="M56 262 L130 158 H344 L270 262 Z"/>
+<path d="M56.0 262.0 L109.5 262.0 L128.0 236.0 L74.5 236.0 Z" fill="url(#ht)" stroke="none"/><path d="M93.0 210.0 L146.5 210.0 L165.0 184.0 L111.5 184.0 Z" fill="url(#ht)" stroke="none"/><path d="M128.0 236.0 L181.5 236.0 L200.0 210.0 L146.5 210.0 Z" fill="url(#ht)" stroke="none"/><path d="M165.0 184.0 L218.5 184.0 L237.0 158.0 L183.5 158.0 Z" fill="url(#ht)" stroke="none"/><path d="M163.0 262.0 L216.5 262.0 L235.0 236.0 L181.5 236.0 Z" fill="url(#ht)" stroke="none"/><path d="M200.0 210.0 L253.5 210.0 L272.0 184.0 L218.5 184.0 Z" fill="url(#ht)" stroke="none"/><path d="M235.0 236.0 L288.5 236.0 L307.0 210.0 L253.5 210.0 Z" fill="url(#ht)" stroke="none"/><path d="M272.0 184.0 L325.5 184.0 L344.0 158.0 L290.5 158.0 Z" fill="url(#ht)" stroke="none"/>
+<path d="M109.5 262 L183.5 158 M74.5 236 L288.5 236 M163 262 L237 158 M93 210 L307 210 M216.5 262 L290.5 158 M111.5 184 L325.5 184 " stroke-width="1.4"/>
+<path d="M56 262 V276 H270 V262 M270 276 L344 172 V158"/>
+<path d="M193 143 Q197 159 188 169 H214 Q205 159 209 143 Z" fill="#fbfaf6"/><circle cx="201" cy="133" r="10" fill="#fbfaf6"/><path d="M277.5 195 H301.5 L298.5 165 H280.5 Z" fill="#fbfaf6"/><path d="M277.5 165 V151 H284.5 V157 H294.5 V151 H301.5 V165 Z" fill="#fbfaf6"/><path d="M209.5 195 Q213.5 211 204.5 221 H230.5 Q221.5 211 225.5 195 Z" fill="url(#hr)" stroke="#c8372d"/><circle cx="217.5" cy="185" r="10" fill="url(#hr)" stroke="#c8372d"/><path d="M84 221 Q88 237 79 247 H105 Q96 237 100 221 Z" fill="#fbfaf6"/><circle cx="92" cy="211" r="10" fill="#fbfaf6"/>
+</g>
+</svg>

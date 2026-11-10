@@ -1,4 +1,98 @@
+:root {
+  --paper: #f7f5f0;
+  --ink: #1f1f1f;
+  --soft: #8a867e;
+  --line: #e3dfd6;
+  --red: #c8372d;
+  --teal: #2a7f7a;
+  --yellow: #c9962b;
+}
+
 html {
-  --mat-button-filled-container-color: #c8614f;
+  --mat-button-filled-container-color: var(--ink);
   --mat-button-filled-label-text-color: #ffffff;
+  --mat-button-filled-container-shape: 2px;
+  --mat-table-background-color: transparent;
+  --mat-form-field-filled-container-color: #efece5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+}
+
+/* shared page layout */
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px 6vw 110px;
+}
+
+.page.narrow {
+  max-width: 460px;
+}
+
+.page-title {
+  margin: 0 0 48px;
+  font-size: clamp(20px, 2.6vw, 28px);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-title {
+  margin: 0 0 44px;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* three short pencil strokes under every section title */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, var(--red) 0 16px, transparent 16px 19px, var(--yellow) 19px 35px, transparent 35px 38px, var(--teal) 38px 54px);
+}
+
+.text-link {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 2px;
+}
+
+.text-link:hover {
+  color: var(--red);
+}
+
+.note {
+  text-align: center;
+  color: var(--soft);
+  letter-spacing: 0.06em;
 }

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Scratch-Off World Map">
+<title>Scratch-Off World Map</title>
+<defs>
+<filter id="p" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="4" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="9" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.4" result="m"/>
+<feComposite in="d" in2="m" operator="in"/>
+</filter>
+<pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2b2b2b" stroke-width="1.3"/></pattern>
+<pattern id="hr" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c8372d" stroke-width="1.6"/></pattern>
+<pattern id="hy" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#c9962b" stroke-width="2.1"/></pattern>
+<pattern id="ht" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#2a7f7a" stroke-width="2.1"/></pattern>
+<pattern id="hxy" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#c9962b" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hxt" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2a7f7a" stroke-width="1.5" fill="none"/></pattern>
+<pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)"><path d="M0 0 V9 M0 0 H9" stroke="#2b2b2b" stroke-width="0.8" fill="none"/></pattern>
+</defs>
+<g filter="url(#p)" fill="none" stroke="#2b2b2b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M65 323 l60 -11 M103 320 l60 -11 M142 323 l60 -11 M180 320 l60 -11 M219 323 l60 -11 M257 320 l60 -11 " stroke-width="1.5" opacity=".5"/>
+<path d="M56 106 H344 V262 Q344 288 318 288 H56 Z"/>
+<path d="M344 262 Q316 258 318 288" stroke-width="1.4"/>
+<path d="M56 198 H344 M200 106 V288" stroke-width="1.4" opacity=".35" stroke-dasharray="3 7"/>
+<path d="M96 138 Q130 126 140 150 Q146 170 128 182 Q134 202 146 224 Q150 250 132 260 Q118 238 116 210 Q98 190 90 164 Z" fill="url(#ht)" stroke-width="1.4"/>
+<path d="M196 144 Q222 134 232 150 Q226 166 236 184 Q246 214 226 248 Q210 234 208 206 Q190 188 196 144 Z" fill="url(#hr)" stroke="#c8372d" stroke-width="1.4"/>
+<path d="M246 140 Q290 124 318 148 Q324 174 300 184 Q286 202 266 190 Q246 178 246 140 Z" stroke-width="1.4"/>
+<path d="M284 226 Q306 218 316 234 Q310 252 290 248 Z" stroke-width="1.4"/>
+<circle cx="330" cy="326" r="21" fill="#fbfaf6"/><circle cx="330" cy="326" r="14" stroke-width="1.4"/>
+<path d="M252 304 l7 3 M270 312 l6 -2 M242 316 l5 5 M286 302 l4 4" stroke-width="1.4"/>
+</g>
+</svg>

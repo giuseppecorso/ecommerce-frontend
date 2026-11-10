@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+<defs>
+<filter id="p" x="-8%" y="-8%" width="116%" height="116%">
+<feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="5" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="1.6" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="1" seed="2" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.4 1.4" result="m"/>
+<feComposite in="d" in2="m" operator="in"/>
+</filter>
+<pattern id="hR" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="4" stroke="#c8372d" stroke-width="1.5"/></pattern>
+<pattern id="hT" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="4" stroke="#2a7f7a" stroke-width="1.5"/></pattern>
+<pattern id="hO" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="4" stroke="#c9962b" stroke-width="1.5"/></pattern>
+<pattern id="hI" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="4" stroke="#3d4f8f" stroke-width="1.5"/></pattern>
+</defs>
+<g filter="url(#p)" fill="none" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M36 46 H64 V86 H36 Z"/><path d="M36 54 Q50 60 64 54" stroke-width="1.2"/><path d="M50 46 V38"/><path d="M50 16 Q60 30 50 38 Q40 30 50 16 Z" fill="url(#hO)" stroke="#c9962b"/>
+</g>
+</svg>
