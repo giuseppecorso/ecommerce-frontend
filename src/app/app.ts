@@ -17,6 +17,10 @@ export class App {
   protected readonly title = signal('ecommerce-frontend');
   private router = inject(Router);
 
+  isLoggedIn(): boolean {
+    return localStorage.getItem('token') !== null;
+  }
+
   logout() {
     if (confirm('Confirm log out?')) {
       localStorage.removeItem('token');

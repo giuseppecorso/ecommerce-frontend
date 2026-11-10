@@ -9,14 +9,17 @@
     <mat-icon>add_box</mat-icon>
     New product
   </a>
-  <a matButton="filled" routerLink="/login">
-    <mat-icon>login</mat-icon>
-    Login
-  </a>
-  <button matButton="filled" (click)="logout()">
-    <mat-icon>logout</mat-icon>
-    Logout
-  </button>
+  @if (isLoggedIn()) {
+    <button matButton="filled" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  } @else {
+    <a matButton="filled" routerLink="/login">
+      <mat-icon>login</mat-icon>
+      Login
+    </a>
+  }
 
 </mat-toolbar>
 <router-outlet />
