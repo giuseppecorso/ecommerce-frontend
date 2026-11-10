@@ -1,59 +1,64 @@
-# EcommerceFrontend
+# Curio Lane — Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Angular frontend of Curio Lane, a small online shop of design objects
+and curiosities.
 
-## Development server
+**Live shop:** https://curiolane.giuseppecorso.it
 
-To start a local development server, run:
+**Backend (Spring Boot REST API):** https://github.com/giuseppecorso/ecommerce-backend
 
-```bash
-ng serve
-```
+**Demo account:** username `user`, password `curio2026`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tech Stack
 
-## Code scaffolding
+- Angular 22 (standalone components)
+- Angular Material
+- RxJS
+- Vitest
+- Docker (Node build stage + Nginx)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Features
 
-```bash
-ng generate component component-name
-```
+- Product catalog and product detail page
+- Login with JWT: the token is stored in the browser and attached to
+  every API request by an HTTP interceptor
+- "My orders" page for the logged-in user
+- Product creation form (ADMIN only)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## API base URL
 
-```bash
-ng generate --help
-```
+The API address comes from `src/environments`:
 
-## Building
+- development: `http://localhost:8080`, the backend running locally
+- production: an empty string, so requests go to `/api` on the same
+  domain that serves the app. Nginx forwards them to the backend, and
+  since app and API share the same origin, no CORS is involved.
 
-To build the project run:
+## Running locally
 
-```bash
-ng build
-```
+    npm install
+    npm start
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The app runs on http://localhost:4200 and expects the backend on
+http://localhost:8080.
 
-## Running unit tests
+## Build
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+    npm run build
 
-```bash
-ng test
-```
+## Docker
 
-## Running end-to-end tests
+    docker build -t curiolane-frontend .
 
-For end-to-end (e2e) testing, run:
+The image is built in two stages: a Node stage compiles the app, and an
+Nginx stage serves the static files. `nginx.conf` sends every unknown
+path back to `index.html`, so client-side routes like `/my-orders` work
+on a page reload too.
 
-```bash
-ng e2e
-```
+In production the image is started together with the backend by the
+`docker-compose.prod.yml` file in the backend repository.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## CI
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+A GitHub Actions workflow builds the app on every push and pull request
+to `main`.
