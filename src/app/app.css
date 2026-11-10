@@ -27,8 +27,8 @@ main {
 }
 
 .brand app-logo {
-  width: 92px;
-  height: 70px;
+  width: 76px;
+  height: 76px;
 }
 
 .brand span {
@@ -80,8 +80,8 @@ main {
 }
 
 .about app-logo {
-  width: 120px;
-  height: 92px;
+  width: 104px;
+  height: 104px;
 }
 
 .about p {
@@ -123,6 +123,6 @@ main {
 @media (max-width: 760px) {
   .cols { grid-template-columns: 1fr 1fr; }
   .about { grid-column: 1 / -1; }
-  .brand app-logo { width: 72px; height: 55px; }
+  .brand app-logo { width: 60px; height: 60px; }
   .brand span { display: none; }
 }
