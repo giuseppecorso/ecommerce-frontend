@@ -17,22 +17,22 @@ import { Component } from '@angular/core';
           <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.1 1.8" result="m" />
           <feComposite in="d" in2="m" operator="in" />
         </filter>
-        <path id="cl-top" d="M14 60 A46 33 0 0 1 106 60" />
-        <path id="cl-bottom" d="M12 60 A48 35 0 0 0 108 60" />
+        <path id="cl-top" d="M16 60 A44 30.5 0 0 1 104 60" />
+        <path id="cl-bottom" d="M11 60 A49 36.5 0 0 0 109 60" />
       </defs>
       <g filter="url(#cl-ink)">
-        <ellipse cx="60" cy="60" rx="56" ry="42" fill="none" stroke="#c8372d" stroke-width="6.5" />
-        <ellipse cx="60" cy="60" rx="38" ry="26" fill="none" stroke="#c8372d" stroke-width="3" />
+        <ellipse cx="60" cy="60" rx="57" ry="43" fill="none" stroke="#c8372d" stroke-width="5" />
+        <ellipse cx="60" cy="60" rx="35" ry="22.5" fill="none" stroke="#c8372d" stroke-width="3" />
         <text font-family="'Jost', sans-serif" font-weight="600" font-size="9.5" letter-spacing="2.4" fill="#c8372d">
           <textPath href="#cl-top" startOffset="50%" text-anchor="middle">CURIO LANE</textPath>
         </text>
         <text font-family="'Jost', sans-serif" font-weight="600" font-size="6.2" letter-spacing="1.2" fill="#c8372d">
           <textPath href="#cl-bottom" startOffset="50%" text-anchor="middle">SMALL FINDS · BIG STORIES</textPath>
         </text>
-        <text x="53" y="74" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif"
-              font-style="italic" font-weight="700" font-size="42" fill="#c8372d" stroke="#c8372d" stroke-width="1.6">C</text>
-        <text x="67" y="74" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif"
-              font-style="italic" font-weight="700" font-size="42" fill="#2a7f7a" stroke="#2a7f7a" stroke-width="1.6" style="mix-blend-mode: multiply">L</text>
+        <text x="54" y="72" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif"
+              font-style="italic" font-weight="700" font-size="38" fill="#c8372d" stroke="#c8372d" stroke-width="1.6">C</text>
+        <text x="66" y="72" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif"
+              font-style="italic" font-weight="700" font-size="38" fill="#2a7f7a" stroke="#2a7f7a" stroke-width="1.6" style="mix-blend-mode: multiply">L</text>
       </g>
     </svg>
   `,
