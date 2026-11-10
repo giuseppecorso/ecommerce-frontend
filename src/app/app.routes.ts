@@ -4,6 +4,7 @@ import { ProductList } from './product-list/product-list';
 import { ProductDetail } from './product-detail/product-detail';
 import { Login } from './login/login';
 import { MyOrders } from './my-orders/my-orders';
+import { OrderDetail } from './order-detail/order-detail';
 import { NewProduct } from './new-product/new-product';
 
 export const routes: Routes = [
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: 'products/:id', component: ProductDetail, title: 'Curio Lane' },
     { path: 'login', component: Login, title: 'Login — Curio Lane' },
     { path: 'my-orders', component: MyOrders, title: 'My orders — Curio Lane' },
+    { path: 'my-orders/:id', component: OrderDetail, title: 'Order — Curio Lane' },
     { path: 'new-product', component: NewProduct, title: 'New product — Curio Lane' },
     { path: '**', redirectTo: '' },
 ];

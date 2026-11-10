@@ -4,11 +4,12 @@ import { Order } from '../order';
 import { environment } from '../../environments/environment';
 import { MatTableModule } from '@angular/material/table';
 import { DatePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-my-orders',
-  imports: [MatTableModule, DatePipe],
+  imports: [MatTableModule, DatePipe, RouterLink],
   templateUrl: './my-orders.html',
   styleUrl: './my-orders.css',
 })
@@ -17,7 +18,7 @@ export class MyOrders {
   orders = signal<Order[]>([]);
   loading = signal(true);
   errorMessage = signal('');
-  displayedColumns = ['id', 'username', 'dateOrder', 'status', 'items'];
+  displayedColumns = ['id', 'username', 'dateOrder', 'status', 'items', 'view'];
 
   constructor() {
     this.http

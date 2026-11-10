@@ -1,0 +1,107 @@
+.page {
+  max-width: 760px;
+}
+
+.meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: -20px 0 64px;
+  color: var(--soft);
+  letter-spacing: 0.08em;
+}
+
+.status {
+  padding: 3px 12px;
+  border: 1px solid var(--soft);
+  border-radius: 20px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.status.new { border-color: var(--yellow); color: var(--yellow); }
+.status.paid { border-color: var(--teal); color: var(--teal); }
+.status.shipped { border-color: var(--red); color: var(--red); }
+
+.items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.items li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.items img {
+  flex: none;
+  width: 84px;
+  height: 84px;
+}
+
+.what {
+  flex: 1;
+  min-width: 0;
+}
+
+h3 {
+  margin: 0 0 4px;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h3 a {
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: var(--red);
+}
+
+.what p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 14px;
+}
+
+.amount {
+  margin: 0;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 24px;
+  margin: 22px 0 0;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.total span {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+.back {
+  margin: 56px 0 0;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .items img { width: 60px; height: 60px; }
+  .items li { gap: 12px; }
+}

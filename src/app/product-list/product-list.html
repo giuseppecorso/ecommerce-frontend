@@ -6,6 +6,7 @@
   } @else if (products().length === 0) {
     <p class="note">The shelves are empty right now. Please come back later.</p>
   } @else {
+    <div class="layout">
     <nav class="filters" aria-label="Categories">
       <button type="button" [class.active]="selected() === null" (click)="selected.set(null)">All</button>
       @for (g of groups(); track g.name) {
@@ -13,7 +14,11 @@
       }
     </nav>
 
+    <div class="groups">
     @for (g of visibleGroups(); track g.name) {
+      @if (!$first) {
+        <hr class="pencil-rule" />
+      }
       <section class="group">
         <h2 class="section-title">{{ g.name }}</h2>
         <div class="grid">
@@ -23,5 +28,7 @@
         </div>
       </section>
     }
+    </div>
+    </div>
   }
 </div>
