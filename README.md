@@ -58,7 +58,9 @@ on a page reload too.
 In production the image is started together with the backend by the
 `docker-compose.prod.yml` file in the backend repository.
 
-## CI
+## CI/CD
 
 A GitHub Actions workflow builds the app on every push and pull request
-to `main`.
+to `main`. When a push to `main` builds correctly, a second job connects
+to the server over SSH and runs the deploy script kept in the backend
+repository, which rebuilds the containers.
